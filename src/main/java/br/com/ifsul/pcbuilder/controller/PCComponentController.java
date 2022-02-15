@@ -2,7 +2,7 @@ package br.com.ifsul.pcbuilder.controller;
 
 import br.com.ifsul.pcbuilder.dto.PCComponentCreationRequestDto;
 import br.com.ifsul.pcbuilder.dto.PCComponentSearchResponseDto;
-import br.com.ifsul.pcbuilder.service.PCComponentService;
+import br.com.ifsul.pcbuilder.service.pccomponent.PCComponentService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;

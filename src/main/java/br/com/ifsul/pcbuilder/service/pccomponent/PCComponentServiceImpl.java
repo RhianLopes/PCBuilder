@@ -1,9 +1,9 @@
-package br.com.ifsul.pcbuilder.service;
+package br.com.ifsul.pcbuilder.service.pccomponent;
 
 import br.com.ifsul.pcbuilder.dto.PCComponentCreationRequestDto;
 import br.com.ifsul.pcbuilder.dto.PCComponentSearchResponseDto;
 import br.com.ifsul.pcbuilder.mapper.PCComponentMapper;
-import br.com.ifsul.pcbuilder.model.Category;
+import br.com.ifsul.pcbuilder.model.Compatibility;
 import br.com.ifsul.pcbuilder.model.PCComponent;
 import br.com.ifsul.pcbuilder.repository.PCComponentRepository;
 import br.com.ifsul.pcbuilder.specification.PCComponentSpecification;
@@ -31,6 +31,13 @@ public class PCComponentServiceImpl implements PCComponentService {
     public List<PCComponentSearchResponseDto> search(String brand, String model, String category) {
         final Specification<PCComponent> specification = PCComponentSpecification.getPCComponentsBySpecification(brand, model, category);
         return repository.findAll(specification).stream()
+                .map(mapper::mapPCComponentToSearchDto)
+                .collect(Collectors.toList());
+    }
+
+    @Override
+    public List<PCComponentSearchResponseDto> searchByCompatibility(Compatibility compatibility) {
+        return repository.findAllByCompatibility(compatibility).stream()
                 .map(mapper::mapPCComponentToSearchDto)
                 .collect(Collectors.toList());
     }
