@@ -1,0 +1,8 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-table-component
+      author: rhian.costa
+      changes:
+        - sqlFile:
+            path: component/create-table-component.sql
+            relativeToChangelogFile: true
