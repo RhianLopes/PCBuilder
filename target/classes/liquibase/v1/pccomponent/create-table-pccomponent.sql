@@ -1,4 +1,4 @@
-CREATE TABLE component (
+CREATE TABLE pc_component (
     id              BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
     brand           VARCHAR(255) NOT NULL,
     model           VARCHAR(255) NOT NULL,

@@ -1,8 +1,8 @@
 databaseChangeLog:
   - changeSet:
-      id: create-table-component
+      id: create-table-pccomponent
       author: rhian.costa
       changes:
         - sqlFile:
-            path: component/create-table-component.sql
+            path: pccomponent/create-table-pccomponent.sql
             relativeToChangelogFile: true

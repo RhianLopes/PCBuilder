@@ -11,12 +11,12 @@ import javax.validation.constraints.Size;
 import java.math.BigDecimal;
 
 @Data
-@Table
 @Entity
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class Component {
+@Table(name = "pc_component")
+public class PCComponent {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
