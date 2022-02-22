@@ -19,5 +19,5 @@ spring:
     url: ${spring.datasource.url}
     default-schema: pcbuilder_db
     change-log: classpath:/liquibase/liquibase-changelog.yml
-    user: root
-    password: toor
+    user: ${spring.datasource.username}
+    password: ${spring.datasource.password}
