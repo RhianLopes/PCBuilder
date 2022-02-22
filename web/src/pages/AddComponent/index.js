@@ -37,36 +37,36 @@ export function AddComponent() {
                 <div className='add-box'>
                     <div className='add-box-left'>
                         <div className='add-field exception'>
-                            <TextField required id="outlined-basic" className='field' label="Marca" variant="standard" onChange={event => setBrand(event.target.value)}/>
+                            <TextField required id='outlined-basic' className='field' label='Marca' variant='standard' onChange={event => setBrand(event.target.value)}/>
                         </div>
                         <div className='add-field exception'>
-                            <TextField required id="outlined-basic" className='field' label="Modelo" variant="standard" onChange={event => setModel(event.target.value)}/>
+                            <TextField required id='outlined-basic' className='field' label='Modelo' variant='standard' onChange={event => setModel(event.target.value)}/>
                         </div>
                         <div className='add-field exception'>
                             <CurrencyTextField
                                 required
-                                label="Preço"
-                                variant="standard"
+                                label='Preço'
+                                variant='standard'
                                 className='field'
                                 value={price}
-                                currencySymbol="R$"
-                                outputFormat="number"
+                                currencySymbol='R$'
+                                outputFormat='number'
                                 onChange={(event, value)=> setPrice(value)}
                             />
                         </div>
                     </div>
                     <div className='add-box-right'>
                         <div className='add-field'>
-                            <InputLabel required id="demo-simple-select-label">Categoria</InputLabel>
+                            <InputLabel required id='demo-simple-select-label'>Categoria</InputLabel>
                             <Select
                                 required
-                                labelId="demo-simple-select-label"
-                                id="demo-simple-select"
+                                labelId='demo-simple-select-label'
+                                id='demo-simple-select'
                                 value={category}
-                                label="Categoria"
+                                label='Categoria'
                                 onChange={event => setCategory(event.target.value)}
-                                className="field"
-                                variant="standard"
+                                className='field'
+                                variant='standard'
                             >
                                 <MenuItem value={'MOTHERBOARD'}>PLACA-MÃE</MenuItem>
                                 <MenuItem value={'MEMORY'}>MEMÓRIA</MenuItem>
@@ -75,16 +75,16 @@ export function AddComponent() {
                             </Select>
                         </div>
                         <div className='add-field'>
-                            <InputLabel required id="demo-simple-select-label">Compatibilidade</InputLabel>
+                            <InputLabel required id='demo-simple-select-label'>Soquete de Compatibilidade</InputLabel>
                             <Select
                                 required
-                                labelId="demo-simple-select-label"
-                                id="demo-simple-select"
+                                labelId='demo-simple-select-label'
+                                id='demo-simple-select'
                                 value={compatibility}
-                                label="Compatibilidade"
+                                label='Soquete de Compatibilidade'
                                 onChange={event => setCompatibility(event.target.value)}
-                                className="field"
-                                variant="standard"
+                                className='field'
+                                variant='standard'
                             >
                                 <MenuItem value={'A'}>A</MenuItem>
                                 <MenuItem value={'B'}>B</MenuItem>
@@ -95,7 +95,7 @@ export function AddComponent() {
                     </div>
                 </div>
                 <div className='add-button'>
-                    <Button variant="contained" size="large" onClick={() => onSubmit()}>CADASTRAR</Button>
+                    <Button variant='contained' size='large' onClick={() => onSubmit()}>CADASTRAR</Button>
                 </div>
             </form>
         </div>

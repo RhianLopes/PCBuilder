@@ -26,16 +26,16 @@ export function BuildPC() {
             <h1>Montagem de Computador</h1>
             <form className='filter-box' ref={formRef}>
                 <div className='filter-item'>
-                    <InputLabel required id="demo-simple-select-label">Compatibilidade</InputLabel>
+                    <InputLabel required id='demo-simple-select-label'>Soquete de Compatibilidade</InputLabel>
                     <Select
                         required
-                        labelId="demo-simple-select-label"
-                        id="demo-simple-select"
+                        labelId='demo-simple-select-label'
+                        id='demo-simple-select'
                         value={compatibility}
-                        label="Compatibilidade"
+                        label='Soquete de Compatibilidade'
                         onChange={event => setCompatibility(event.target.value)}
-                        className="select"
-                        variant="standard"
+                        className='select'
+                        variant='standard'
                     >
                         <MenuItem value={'A'}>A</MenuItem>
                         <MenuItem value={'B'}>B</MenuItem>
@@ -44,10 +44,12 @@ export function BuildPC() {
                     </Select>
                 </div>
                 <div className='filter-item'>
-                    <Button variant="contained" size="large" onClick={() => onSubmit()}>MONTAR</Button>
+                    <Button variant='contained' size='large' onClick={() => onSubmit()}>MONTAR</Button>
                 </div>
             </form>
+            
             <div className='scroll-box'>
+                <h2>Sugestões de Peças:</h2>
                 {components && components.map((item) => {
                     return (
                         <div className='list-item' key={item.id}>
@@ -55,7 +57,7 @@ export function BuildPC() {
                             <div><b>Marca:</b> {item.brand}</div>
                             <div><b>Categoria:</b> {item.category}</div>
                             <div><b>Compatibilidade:</b> {item.compatibility}</div>
-                            <div><b>Preço:</b> {item.price.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'}).replace(".", ",")}</div>
+                            <div><b>Preço:</b> {item.price.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'}).replace('.', ',')}</div>
                         </div>
                     )
                 })}

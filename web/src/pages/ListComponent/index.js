@@ -30,21 +30,21 @@ export function ListComponent() {
             <h1>Listagem de Componentes</h1>
             <div className='filter-box'>
                 <div className='filter-item exception'>
-                    <TextField id="outlined-basic" label="Marca" variant="standard" onChange={event => setBrand(event.target.value)}/>
+                    <TextField id='outlined-basic' label='Marca' variant='standard' onChange={event => setBrand(event.target.value)}/>
                 </div>
                 <div className='filter-item exception'>
-                    <TextField id="outlined-basic" label="Modelo" variant="standard" onChange={event => setModel(event.target.value)}/>
+                    <TextField id='outlined-basic' label='Modelo' variant='standard' onChange={event => setModel(event.target.value)}/>
                 </div>
                 <div className='filter-item'>
-                    <InputLabel id="demo-simple-select-label">Categoria</InputLabel>
+                    <InputLabel id='demo-simple-select-label'>Categoria</InputLabel>
                     <Select
-                      labelId="demo-simple-select-label"
-                      id="demo-simple-select"
+                      labelId='demo-simple-select-label'
+                      id='demo-simple-select'
                       value={category}
-                      label="Categoria"
+                      label='Categoria'
                       onChange={event => setCategory(event.target.value)}
-                      className="select"
-                      variant="standard"
+                      className='select'
+                      variant='standard'
                     >
                         <MenuItem value={'MOTHERBOARD'}>PLACA-MÃE</MenuItem>
                         <MenuItem value={'MEMORY'}>MEMÓRIA</MenuItem>
@@ -60,8 +60,8 @@ export function ListComponent() {
                             <h2>{item.id} - {item.model}</h2>
                             <div><b>Marca:</b> {item.brand}</div>
                             <div><b>Categoria:</b> {item.category}</div>
-                            <div><b>Compatibilidade:</b> {item.compatibility}</div>
-                            <div><b>Preço:</b> {item.price.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'}).replace(".", ",")}</div>
+                            <div><b>Soquete de Compatibilidade:</b> {item.compatibility}</div>
+                            <div><b>Preço:</b> {item.price.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'}).replace('.', ',')}</div>
                         </div>
                     )
                 })}
