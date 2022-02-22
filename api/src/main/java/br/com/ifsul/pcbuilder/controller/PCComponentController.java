@@ -12,7 +12,7 @@ import javax.validation.constraints.Size;
 import java.util.List;
 
 @RestController
-@RequestMapping("/pc-component")
+@RequestMapping("/components")
 @RequiredArgsConstructor
 public class PCComponentController {
 

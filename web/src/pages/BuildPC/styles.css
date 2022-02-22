@@ -1,0 +1,36 @@
+.container {
+    width: 100%;
+    padding: 15px;
+}
+
+.filter-box {
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.filter-item {
+    margin: 10px;
+}
+
+.select {
+    width: 200px;
+}
+
+.scroll-box {
+    height: 80vh;
+    overflow: hidden;
+    overflow-y: scroll;
+    scroll-behavior: auto;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+    padding: 10px;
+}
+
+.list-item {
+    /* height: 60px; */
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 5px;
+}

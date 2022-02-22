@@ -18,7 +18,7 @@ public class PCController {
 
     private final PCService service;
 
-    @PostMapping("/build")
+    @PostMapping("/builds")
     public List<PCComponentSearchResponseDto> build(@RequestBody PCBuildingRequestDto requestDto) {
         return service.build(requestDto);
     }
